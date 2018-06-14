@@ -1,0 +1,556 @@
+
+  .App{
+  background-color: black;
+  min-height:1680px;
+  color:#CDD0D5;
+}
+
+li {
+  list-style-type: none;
+}
+
+a{
+  text-decoration: none;
+  color:#CDD0D5;
+}
+
+/* --------------------------------------------------
+   Nav
+-----------------------------------------------------*/
+
+
+.Header-fix{
+  width:100%;
+  position:fixed;
+  top:0px;
+  left:0;
+  z-index: 500;
+}
+
+.App-header {
+  display:flex;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  background-color: #2B1F36;
+  color: red;
+  text-align: center;
+  max-width:1280px;
+  margin: 0 auto;
+
+}
+
+.searchFix{
+  display:flex;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  max-width:1280px;
+  margin: 0 auto;
+}
+
+.searchFix2{
+  display:none;
+}
+
+.mainSearch {
+  box-sizing: border-box;
+  color: red;
+  text-align: left;
+  width:1280px;
+  height:50px;
+  font-size:1.5em;
+  margin: 0 auto;
+}
+
+.FaSearch{
+  font-size: 1.5em;
+}
+
+.flexList{
+  display: flex;
+  justify-content: flex-start;
+}
+
+ul li{
+  margin-right: 5px;
+}
+
+.temp {
+  /* border:2px solid red;
+  margin-left: auto; */
+  display: relative;
+  margin-right: 1em;
+}
+
+.space{
+  height:150px
+}
+
+.App-logo {
+  /* animation: App-logo-spin infinite 20s linear; */
+  height: 70px;
+}
+/* @keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+} */
+
+.sugg {
+  position: absolute;
+  background-color: white;
+  text-align: left;
+  width:50%;
+  color:blue;
+  font-size: 1.5em;
+  background: lightblue;
+  z-index: 1000;
+}
+
+.sugg ul li {
+  color: black;
+
+}
+
+.sugg2{
+  display: none;
+}
+
+
+/*----------------------------content ------------------------------------------ */
+.content {
+  display:flex;
+  align-items: baseline;
+  text-align: center;
+  max-width:960px;
+  margin: 0 auto;
+  /* border:20px purple solid; */
+}
+
+/*----------------------------left content--------------------------------------------- */
+.left {
+  flex:1;
+  display:flex;
+  flex-flow: column;
+  justify-content: flex-start;
+
+  margin-right:5px;
+  color:white;
+
+}
+
+.filters .xx {
+flex:1;
+display:flex;
+flex-flow: column;
+justify-content: space-around;
+background-color: #38363b;
+margin-top: 5px;
+border-radius: 3px;
+height: 100px;
+}
+
+.filters .yy {
+display: none;
+}
+
+.xx1{
+  background: #110E1F;
+  height:30px;
+  margin-bottom: 10px;
+  border:.02px solid #2B1F36;
+
+}
+
+.xx1 div{
+  position:relative;
+  top:8px;
+  margin-bottom: 10px;
+
+}
+
+.xx2 {
+  display: flex;
+  flex-flow: column;
+}
+
+.xx3 {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  width:80%;
+  margin:0 auto;
+}
+
+.xx3 a {
+  width:30%;
+
+}
+
+.xx3 a img{
+  border-radius:20%;
+}
+
+/*----------------------------right content ------------------------------------------ */
+.right{
+  /* border:7px solid blue; */
+  flex:5;
+  display:flex;
+  flex-flow: column;
+}
+
+.searchForm0{
+  display:flex;
+  justify-content: flex-end;
+  color:yellow;
+  margin-right: 18px;
+  margin-left: 5px;
+  margin-bottom: 5px;
+
+}
+
+
+.rightTop{
+  display:flex;
+  justify-content: space-between;
+  color:yellow;
+}
+
+.filtered{
+  display: flex;
+  justify-content: space-around;
+  margin-left: 20px;
+}
+
+.filtered div{
+  margin-left: 10px;
+  font-size: .9em;
+  color: lightgrey;
+}
+
+.rightTop select{
+  margin-right: 18px;
+  margin-left: 5px;
+}
+
+.Grid {
+  padding: 5px;
+
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.Product-Wrap{
+  box-sizing: border-box;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+  transition: .3s;
+  width:40%;
+  /* border: 2px solid red; */
+  margin:7px;
+}
+
+
+.Product-Wrap:hover{
+  background-color: silver;
+}
+
+.Product-Desc{
+  padding: 2px 15px;
+  background-color: #2B1F36;
+  border-radius: 0 0 10px 10px;
+}
+
+.Product-price{
+  color:red;
+  font-weight: 800px;
+  font-size: 20px;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.40);
+
+}
+
+.Product-Image {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.view-1 {
+  border: #1C1016 solid 2px;
+  background-color: #2B1F36;
+  color:white;
+  border-radius: 10px;
+  padding: 0 5px 0 5px ;
+  position: absolute;
+  top:10px;
+}
+
+.view-2 {
+  border: #1C1016 solid 2px;
+  background-color: #2B1F36;
+  color:white;
+  border-radius: 10px;
+  padding: 0 5px 0 5px ;
+  position: absolute;
+  top:10px;
+  visibility: hidden;
+}
+
+.Product-Image div:hover{
+  display: inline-block;
+  background-color: yellow;
+  color:#2B1F36;
+}
+
+
+
+
+/*---------------------------------------------------------------------------- */
+
+
+
+
+.footer{
+  box-sizing: border-box;
+  padding: 20px;
+  background-image: linear-gradient(#1C1016, black, #1C1016);
+  color:#e5e5e5;
+  display:flex;
+  flex-flow:column;
+  justify-content: space-between;
+  max-width:960px;
+  margin: 0 auto;
+  margin-top:80px;
+}
+
+
+
+.fup{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.f1{
+  display: flex;
+}
+
+.f1 div:last-child{
+  margin-left: 90px;
+}
+
+.f2 {
+  display: flex;
+  flex-flow: column;
+}
+
+/* bottom of footer */
+
+hr{
+  border-color: #e5e5e5;
+}
+
+.fb1{
+  display: flex;
+}
+
+.fb1 a{
+  margin-right: 20px;
+}
+
+
+
+
+@media (max-width: 580px) {
+  .Grid {
+    display:grid;
+    grid-template-columns: 1fr 1fr ;
+  }
+
+}
+
+/* --------------------------------------------------
+   modal
+-----------------------------------------------------*/
+
+.modal-container {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 300;
+  height:100%;
+  width: 100%;
+  position:absolute;
+  background-color: rgba(0,0,0,0.7);
+}
+
+.modal-container2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 300;
+  height:100%;
+  width: 100%;
+  position:absolute;
+  background-color: rgba(0,0,0,0.7);
+}
+
+.modal{
+  position: relative;
+  background-color: rgba(0,0,0,0.8);
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal img {
+  max-height: 600px;
+  max-width: 700px;
+}
+
+.modal-close {
+  position:absolute;
+  top:0;
+  right:5px;
+  font-size: 3em;
+  color: red;
+  cursor: pointer;
+}
+/*----------------------------Product Bar--------------------------------------------- */
+.Bar-Wrap{
+  display: flex;
+  max-width:960px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+  transition: .3s;
+  color:black;
+  /* border: 2px solid red; */
+}
+
+.bar{
+  width: 50%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.Bar-left{
+  display: flex;
+  align-items: flex-end;
+}
+.Bar-right {
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+}
+
+
+.B-top{
+
+}
+
+.B-bottom{
+  display: flex;
+  justify-content: space-around;
+  color:red;
+}
+/*----------------------------cart  Bar 22222--------------------------------------------- */
+.cs-wrap{
+  display: flex;
+  max-width:960px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  background: white;
+  border-radius: 10px;
+  color:black;
+  margin-top: 50px;
+  min-height: 300px;
+  /* border: 2px solid red; */
+}
+
+.cs-left{
+  box-sizing: border-box;
+  border:red solid 5px;
+  width:65%;
+}
+
+.cs-right{
+  text-align: center;
+  box-sizing: border-box;
+  border:green solid 5px;
+  width:35%;
+}
+
+.cartProductwrap{
+  display:flex;
+  border: green solid 2px;
+}
+
+.cpLeft{
+  width:40%;
+  box-sizing: border-box;
+
+}
+
+
+.cpRight{
+  display: flex;
+  box-sizing: border-box;
+  flex-flow: column;
+  justify-content: flex-start;
+  width:60%;
+  margin-top:2px;
+  font-size: .8em;
+  border: blue solid 2px;
+}
+
+.cpRight h4{
+  margin-top:0;
+  margin-bottom: 4px;
+}
+
+.cartNP{
+  display:flex;
+  justify-content: space-between;
+}
+
+.cartNP h4:last-child{
+  margin-right:10px;
+  color:red;
+
+}
+
+.cartEdit{
+  display: flex;
+
+}
+
+
+
+.cs-right hr {
+  margin-bottom: 0;
+}
+
+
+.Details{
+  border: red solid 2px;
+  height:300px;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+}
+
+.Details div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height:50px;
+  background: lightblue;
+}

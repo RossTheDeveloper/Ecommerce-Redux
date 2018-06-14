@@ -1,0 +1,129 @@
+.App {
+  text-align: center;
+  max-width:960px;
+  margin: 0 auto;
+  border:1px green solid;
+
+}
+
+/* fix css- decide on header & app css, how to apply app css w/o
+distrupting header*/
+/*header needs to have a parent container
+with 100% width, might need for Header
+and content to have seperate css widths*/
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.Header-fix{
+  width:100%;
+  position:fixed;
+  top:0px;
+  left:0;
+  border:1px solid red;
+}
+
+.App-header {
+  box-sizing: border-box;
+  background-color: #222;
+  height: 150px;
+  color: red;
+  border: 10px solid lightblue;
+  max-width:960px;
+  margin:0 auto;
+}
+/* .Search{
+  display:inline-block;
+  height: 30px;
+  width:100%;
+  position:relative;
+  bottom:0;
+  left:0;
+} */
+
+
+.SearchForm{
+  border:3px solid blue;
+  width:100%;
+}
+
+
+
+
+/* .App-header {
+  background-color: black;
+  transition: background-color 1.5s ease;
+  height: 150px;
+  padding: 20px;
+  color: red;
+  border: 10px solid red;
+} */
+
+/*ending transition*/
+
+/* .App-header:hover {
+  background-color: green;
+} */
+
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+
+
+
+.Select{
+  margin-top:200px;
+}
+
+
+.Grid {
+
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap:5px;
+
+}
+
+.Product-Wrap{
+  background: lightgrey;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+  margin:5px;
+  transition: .3s;
+
+}
+
+.Product-Wrap:hover{
+  background-color: silver;
+}
+
+.Product-Desc{
+  padding: 2px 15px;
+  background-color: lightgreen;
+  border-radius: 0 0 10px 10px;
+}
+
+.Product-price{
+  color:red;
+  font-weight: 800px;
+  font-size: 20px;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.40);
+
+}
+
+@media (max-width: 580px) {
+  .Grid {
+    display:grid;
+    grid-template-columns: 1fr 1fr ;
+  }
+
+}
