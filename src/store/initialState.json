@@ -1,12 +1,6 @@
 {
-    "value": "",
-    "select":"",
-    "gender":"",
-    "style":"",
-    "color":"",
-    "modal1":"",
-    "modal2": false,
-    "filters":[],
+
+    "cart":[],
     "products":[
       {"name":"air max 90w","id":0,"price":50,"color":"x","variety":"casual","gender":"female","arrived":"2015-03-27","img":"/images/n1.png"},
       {"name":"air max 95g","id":1,"price":70,"color":"x","variety":"casual","gender":"male","arrived":"2015-03-29","img":"/images/n2.png"},
