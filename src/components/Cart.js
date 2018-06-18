@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import CartProducts from './CartProducts'
+import CartProducts from '../containers/CartProducts'
 
 // const cartProducts = this.props.cart.map((each)=> {
 //   return <div key={each.id} className="cartProductwrap">

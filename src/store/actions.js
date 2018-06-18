@@ -10,6 +10,12 @@ export function addToCart(product) {
 
 }
 
+export const removeFromCart = id =>
+    ({
+        type: C.REMOVE_FROM_CART,
+        payload: id
+    })
+
 // export function addDay(resort, date, powder=false, backcountry=false) {
 //
 //     return {

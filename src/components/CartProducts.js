@@ -24,7 +24,7 @@ class CartProducts extends Component{
 
           <div className="cartEdit">
             <div className="removeProdCart">
-            <button type="button"> Remove </button>
+            <button type="button" onClick={()=>this.props.cartRemove(each.id)}> Remove </button>
             </div>
           </div>
 
@@ -38,7 +38,7 @@ class CartProducts extends Component{
   render() {
     return(
     <div>
-    {this.renderProducts()}
+      {this.renderProducts()}
     </div>
     )
   }
