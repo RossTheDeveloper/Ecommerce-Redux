@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import logo from "../jackal.png";
 import {FaSearch } from 'react-icons/lib/fa'
-import AutoComplete from './autocomplete'
+import AutoComplete from '../containers/AutoComplete'
 import { Link } from 'react-router-dom';
 
 
