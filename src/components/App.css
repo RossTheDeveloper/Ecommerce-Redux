@@ -477,20 +477,22 @@ hr{
 
 .cs-left{
   box-sizing: border-box;
-  border:red solid 5px;
+  margin: 5px;
   width:65%;
 }
 
 .cs-right{
   text-align: center;
   box-sizing: border-box;
-  border:green solid 5px;
+  margin:5px;
+  margin-left: 10px;
   width:35%;
 }
 
 .cartProductwrap{
   display:flex;
-  border: green solid 2px;
+  border-bottom: black solid 1px;
+  margin-bottom: 5px;
 }
 
 .cpLeft{
@@ -508,7 +510,11 @@ hr{
   width:60%;
   margin-top:2px;
   font-size: .8em;
-  border: blue solid 2px;
+}
+
+.removeProdCart button{
+  background: purple;
+  color:white;
 }
 
 .cpRight h4{
@@ -540,7 +546,7 @@ hr{
 
 
 .Details{
-  border: red solid 2px;
+  background: black;
   height:300px;
   display: flex;
   flex-flow: column;
