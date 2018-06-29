@@ -555,8 +555,16 @@ hr{
 
 .Details div{
   display: flex;
-  justify-content: center;
+  justify-content:center;
   align-items: center;
   height:50px;
   background: lightblue;
+
+}
+
+.Details div:last-child{
+  background: yellow;
+  border: solid black 2px;
+  cursor: pointer;
+  font-weight:900;
 }

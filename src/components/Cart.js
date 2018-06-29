@@ -10,6 +10,9 @@ class Cart extends Component {
       const x =each.price*each.qty
       return x + acc },0)
 
+    const tax = (subTotal *.08)
+    const total = subTotal + (subTotal *.08)
+
 
 
     return(
@@ -30,15 +33,15 @@ class Cart extends Component {
             <div className="Details">
 
               <div className="subtotal">
-                {`SUBTOTAL $${subTotal}`}
+                {`SUBTOTAL $${subTotal.toFixed(2)}`}
               </div>
 
               <div className="tax">
-                {`TAX`}
+                {`TAX $${tax.toFixed(2)}`}
               </div>
 
               <div className="Total">
-                {'TOTAL'}
+                {`TOTAL $${total.toFixed(2)}`}
               </div>
 
               <div className="Total">
