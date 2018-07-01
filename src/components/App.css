@@ -389,22 +389,23 @@ hr{
 
 .modal-container2 {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   z-index: 300;
+  top:0px;
   height:100%;
   width: 100%;
-  position:absolute;
+  position:fixed;
   background-color: rgba(0,0,0,0.7);
 }
 
 .modal{
-  position: relative;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background-color: rgba(0,0,0,0.8);
   border-radius: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .modal img {
@@ -572,3 +573,6 @@ hr{
 .Details div:last-child:hover{
   opacity: 0.85;
 }
+
+
+/* ............................... */
