@@ -86,7 +86,7 @@ ul li{
 }
 
 .space{
-  height:150px
+  height:140px
 }
 
 .App-logo {
@@ -432,7 +432,42 @@ hr{
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
   transition: .3s;
   color:black;
+  position:relative;
   /* border: 2px solid red; */
+}
+
+.added{
+  position:fixed;
+  top:90px;
+  height:25px;
+  width:100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: yellow;
+  color:black;
+  font-weight: bold;
+  font-size: 1.2em;
+  z-index:2;
+  animation: fadeIn 1s ease;
+  border-radius:0 40px 40px 0;
+}
+
+.added2{
+  display:none;
+}
+
+.check{
+  color:green;
+  margin-left: 3px;
+}
+@keyframes fadeIn{
+  0%{
+    width:0%;
+  }
+  100%{
+    width:100%
+  }
 }
 
 .bar{

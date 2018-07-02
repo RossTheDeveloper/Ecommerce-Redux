@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
+import {FaCheckCircle as Check } from 'react-icons/lib/fa'
 
 class ProductBar extends Component {
+
+  state={added:false}
 
   addToCart = () => {
     const product = this.props.product
@@ -9,8 +12,11 @@ class ProductBar extends Component {
       size: this.refs.size.value,
       qty: this.refs.qty.value
     }
+    const timer = setTimeout(()=> {this.setState({added:false})},3000)
+
 
     this.props.cartAdd(finishedProduct)
+    this.setState({added:true},()=> timer)
   }
 
   render(){
@@ -21,7 +27,7 @@ class ProductBar extends Component {
     return(
       <div>
         <div className="Bar-Wrap">
-
+        <div className={(this.state.added?"added":"added2")}> Product Added to Cart <Check className="check"/> </div>
           <div className="Bar-left bar">
             <img className="Bar-Image" src={window.location.origin + `${img}`} alt="img test" width="350" height="350" />
           </div>
