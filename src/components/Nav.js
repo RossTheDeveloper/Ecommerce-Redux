@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import logo from "../jackal.png";
-import {FaSearch } from 'react-icons/lib/fa'
+import {FaSearch, FaHome, FaShoppingCart } from 'react-icons/lib/fa'
 import AutoComplete from '../containers/AutoComplete'
 import { Link } from 'react-router-dom';
 
@@ -25,9 +25,9 @@ searchOff = () => {
       <div className="Header-fix">
         <header className="App-header">
           <ul className="flexList">
-            <li><Link to="/">Home</Link></li>
+            <li><Link to="/"> <FaHome className="FaNav" /> </Link></li>
             <li><Link to={`/product/1`}>temp</Link></li>
-            <li><Link to="/contact">Contact</Link></li>
+            <li><Link to="/cart"> <FaShoppingCart className="FaNav" /> </Link></li>
           </ul>
 
           <img src={logo} className="App-logo" alt="logo"/>

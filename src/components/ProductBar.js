@@ -39,7 +39,7 @@ class ProductBar extends Component {
             </div>
 
             <div className="B-bottom">
-                <div>
+                <div className="custom-dropdown">
                   <label htmlFor="size"> <strong> Size: </strong> </label>
                   <select ref="size" name="size" onChange={()=>console.log(this.refs.size.value)}>
                   <option value="9">9</option>
@@ -49,7 +49,7 @@ class ProductBar extends Component {
                 </select>
               </div>
 
-                <div>
+                <div className="custom-dropdown">
                   <label htmlFor="qty"> <strong> QTY: </strong> </label>
                   <select ref="qty" name="qty" onChange={()=>console.log(this.refs.qty.value)}>
                   <option value="1">1</option>
@@ -58,8 +58,12 @@ class ProductBar extends Component {
                   <option value="4">4</option>
               </select></div>
 
-                <div> <button type="button" onClick={this.addToCart}> ADD TO CART </button> </div>
-            </div>
+                <div className="addToCartB"> <button type="button" onClick={this.addToCart}> ADD TO CART </button> </div>
+
+             </div>
+
+
+
 
             </div>
         </div>

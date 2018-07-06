@@ -21,7 +21,7 @@ class App extends Component {
           <Nav />
           <div className="space"> </div>
             <Switch>
-              <Route path="/contact" component={Cart}/>
+              <Route path="/cart" component={Cart}/>
               <Route path="/product/:filter" component={ProductPage}/>
               <Route exact path="/" component={Main}/>
               )} />

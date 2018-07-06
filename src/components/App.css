@@ -118,6 +118,10 @@ ul li{
   display: none;
 }
 
+.FaNav{
+  font-size: 1.5em;
+
+}
 
 /*----------------------------content ------------------------------------------ */
 .content {
@@ -437,8 +441,8 @@ hr{
 }
 
 .added{
-  position:fixed;
-  top:90px;
+  position:absolute;
+  top:-50px;
   height:25px;
   width:100%;
   display: flex;
@@ -489,13 +493,27 @@ hr{
 
 
 .B-top{
-
+  margin-top: -20px;
 }
 
 .B-bottom{
   display: flex;
-  justify-content: space-around;
+  flex-flow: column;
+  align-items: flex-start;
   color:red;
+}
+
+.addToCartB button{
+margin-top: 2px;
+margin-left: 7px;
+background: red;
+font-size: 1.1em;
+font-weight: bold;
+font-style: italic;
+width:130px;
+height: 50px;
+border-radius: 90px;
+cursor: pointer;
 }
 /*----------------------------cart  Bar 22222--------------------------------------------- */
 .cs-wrap{
@@ -611,3 +629,85 @@ hr{
 
 
 /* ............................... */
+/* dropdowns */
+
+
+.big {
+  font-size: 1.2em;
+}
+
+.small {
+  font-size: .7em;
+}
+
+.square {
+  width: .7em;
+  height: .7em;
+  margin: .5em;
+  display: inline-block;
+}
+
+/* Custom dropdown */
+.custom-dropdown {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 10px; /* demo only */
+}
+
+.custom-dropdown select {
+  background-color: #1abc9c;
+  color: #fff;
+  font-size: inherit;
+  padding: .5em;
+  padding-right: 2.5em;
+  border: 0;
+  margin: 0;
+  border-radius: 3px;
+  text-indent: 0.01px;
+  text-overflow: '';
+  /*Hiding the select arrow for firefox*/
+  -moz-appearance: none;
+  /*Hiding the select arrow for chrome*/
+  -webkit-appearance:none;
+  /*Hiding the select arrow default implementation*/
+  appearance: none;
+}
+/*Hiding the select arrow for IE10*/
+.custom-dropdown select::-ms-expand {
+    display: none;
+}
+
+.custom-dropdown::before,
+.custom-dropdown::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+}
+
+.custom-dropdown::after { /*  Custom dropdown arrow */
+  content: "\25BC";
+  height: 1em;
+  font-size: .625em;
+  line-height: 1;
+  right: 1.2em;
+  top: 50%;
+  margin-top: -.5em;
+}
+
+.custom-dropdown::before { /*  Custom dropdown arrow cover */
+  width: 2em;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-radius: 0 3px 3px 0;
+  background-color: rgba(0,0,0,.2);
+}
+
+.custom-dropdown::after {
+  color: rgba(0,0,0,.6);
+}
+
+.custom-dropdown select[disabled] {
+  color: rgba(0,0,0,.25);
+}
