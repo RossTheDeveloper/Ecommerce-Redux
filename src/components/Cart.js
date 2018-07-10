@@ -16,7 +16,7 @@ class Cart extends Component {
 
 
     return(
-      <div>
+      <div className="cart-page">
 
         <div className="cs-wrap">
 

@@ -3,7 +3,7 @@ import ProductBar from '../containers/ProductBar';
 
 
 
- 
+
 
 class ProductPage extends Component {
 
@@ -16,7 +16,7 @@ class ProductPage extends Component {
 render(){
   const chosenProduct = this.renderProduct()
   return (
-    <div>
+    <div className="product-page">
       <ProductBar
       product={chosenProduct}
       />

@@ -1,7 +1,7 @@
 
   .App{
   background-color: black;
-  min-height:1680px;
+  min-height:700px;
   color:#CDD0D5;
 }
 
@@ -13,6 +13,15 @@ a{
   text-decoration: none;
   color:#CDD0D5;
 }
+/* --------------------------------------------------
+   product-page
+-----------------------------------------------------*/
+
+.product-page, .cart-page{
+    min-height:600px;
+}
+
+
 
 /* --------------------------------------------------
    Nav
@@ -506,7 +515,8 @@ hr{
 .addToCartB button{
 margin-top: 2px;
 margin-left: 7px;
-background: red;
+background: blue;
+color:white;
 font-size: 1.1em;
 font-weight: bold;
 font-style: italic;
@@ -514,6 +524,10 @@ width:130px;
 height: 50px;
 border-radius: 90px;
 cursor: pointer;
+}
+
+.addToCartB button:hover{
+  background: darkred;
 }
 /*----------------------------cart  Bar 22222--------------------------------------------- */
 .cs-wrap{
@@ -524,7 +538,6 @@ cursor: pointer;
   background: white;
   border-radius: 10px;
   color:black;
-  margin-top: 50px;
   min-height: 300px;
   /* border: 2px solid red; */
 }
