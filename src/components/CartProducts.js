@@ -6,7 +6,7 @@ class CartProducts extends Component{
 
   renderProducts = () => {
     return this.props.cart.map((each)=> (
-      <div key={each.id} className="cartProductwrap">
+      <div key={each.cartId} className="cartProductwrap">
         <div className="cpLeft">
           <img src={window.location.origin + `${each.img}`} height="100" width="100" />
         </div>
@@ -24,7 +24,7 @@ class CartProducts extends Component{
 
           <div className="cartEdit">
             <div className="removeProdCart">
-            <button type="button" onClick={()=>this.props.cartRemove(each.id)}> Remove </button>
+            <button type="button" onClick={()=>this.props.cartRemove(each.cartId)}> Remove </button>
             </div>
           </div>
 

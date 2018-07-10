@@ -10,9 +10,10 @@ class ProductBar extends Component {
     const finishedProduct = {
       ...product,
       size: this.refs.size.value,
-      qty: this.refs.qty.value
+      qty: this.refs.qty.value,
+      cartId: product.id + this.refs.size.value
     }
-    const timer = setTimeout(()=> {this.setState({added:false})},3000)
+    const timer = setTimeout(()=> {this.setState({added:false})},2000)
 
 
     this.props.cartAdd(finishedProduct)

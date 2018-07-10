@@ -25,9 +25,9 @@ const store = storeFactory(initialState)
 //
 // console.log("bye", store.getState())
 //
-//
-// store.dispatch(addToCart({tony:4}))
-//
+
+store.subscribe(()=> console.log(store.getState()))
+
 // console.log("bye2", store.getState())
 
 

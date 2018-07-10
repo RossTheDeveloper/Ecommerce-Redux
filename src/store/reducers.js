@@ -9,13 +9,23 @@ export const cart = (state=[], action) => {
   switch(action.type) {
 
       case C.ADD_TO_CART :
-      	return [
-           ...state,
-           action.payload
-      	]
+        const hasProduct = state.some((x)=> x.cartId === action.payload.cartId)
+        	if(hasProduct){
+               state.forEach(x => {
+                 if(x.cartId === action.payload.cartId){
+                   x.qty = Number(x.qty) + Number(action.payload.qty)
+                 }
+               })
+               
+          } else {
+              return [
+                 ...state,
+                 action.payload
+              ]
+          }
 
       case C.REMOVE_FROM_CART :
-        return state.filter((prod) => prod.id !== action.payload)
+        return state.filter((prod) => prod.cartId !== action.payload)
     	default:
     		return state
     }
