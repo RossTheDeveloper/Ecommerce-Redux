@@ -1,9 +1,14 @@
 import C from './constants'
 import { combineReducers } from 'redux'
 
-// cart -check if already contained, edit amount if is
-//make sure remove working.
 
+//basic
+
+// state.forEach(x => {
+//   if(x.cartId === action.payload.cartId){
+//     x.qty = Number(x.qty) + Number(action.payload.qty)
+//   }
+// })
 
 export const cart = (state=[], action) => {
   switch(action.type) {
@@ -11,12 +16,17 @@ export const cart = (state=[], action) => {
       case C.ADD_TO_CART :
         const hasProduct = state.some((x)=> x.cartId === action.payload.cartId)
         	if(hasProduct){
-               state.forEach(x => {
-                 if(x.cartId === action.payload.cartId){
-                   x.qty = Number(x.qty) + Number(action.payload.qty)
-                 }
-               })
-               
+            return state.map((x)=>{
+              if(x.cartId === action.payload.cartId){
+                const newQty = Number(x.qty) + Number(action.payload.qty)
+                return {...x,
+                        ...{qty:newQty}
+                      }
+              }
+                return x;
+            })
+
+
           } else {
               return [
                  ...state,
