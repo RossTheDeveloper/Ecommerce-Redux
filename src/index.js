@@ -21,12 +21,12 @@ const store = storeFactory(initialState)
 // store.dispatch({
 //   type:C.ADD_TO_CART,
 //   payload:{syrup:2}
-// })
+// // })
+// //
+// // console.log("bye", store.getState())
+// //
 //
-// console.log("bye", store.getState())
-//
-
-store.subscribe(()=> console.log(store.getState()))
+// store.subscribe(()=> console.log(store.getState()))
 
 // console.log("bye2", store.getState())
 

@@ -5,6 +5,10 @@ class ProductBar extends Component {
 
   state={added:false}
 
+  componentWillUnmount(){
+    clearTimeout(this.timer)
+  }
+
   addToCart = () => {
     const product = this.props.product
     const finishedProduct = {
@@ -13,11 +17,11 @@ class ProductBar extends Component {
       qty: this.refs.qty.value,
       cartId: product.id + this.refs.size.value
     }
-    const timer = setTimeout(()=> {this.setState({added:false})},2000)
+    this.timer = setTimeout(()=> {this.setState({added:false})},3000)
 
 
     this.props.cartAdd(finishedProduct)
-    this.setState({added:true},()=> timer)
+    this.setState({added:true},()=> this.timer)
   }
 
   render(){
